@@ -13,12 +13,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; /* Stack content vertically */
+    padding: 20px;
 }
 
 .container {
     text-align: center;
-    width: 90%;
-    max-width: 800px;
+    width: 100%; /* Full width on mobile */
+    max-width: 800px; /* Limit width on larger screens */
 }
 
 /* Header */
@@ -32,23 +34,31 @@ header {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-top: 10px;
 }
 
+/* Video Container */
+.video-container {
+    width: 100%; /* Full width */
+    max-width: 400px; /* Limit on larger screens */
+    aspect-ratio: 9 / 16; /* Maintain video aspect ratio */
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: black;
+}
 
-/* Video Player */
 .videocontrols {
     width: 100%; 
     height: 100%;
-    border-radius: 30px;
-    object-fit: cover; /* Fill the bezel */
-    background-color: black;
+    object-fit: cover; /* Keep the aspect ratio intact */
+    border-radius: 20px;
 }
 
 /* Summary Section */
 .summary h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin: 10px 0;
 }
 
@@ -75,7 +85,7 @@ footer {
 
 .download-link {
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     background-color: #FF8C00;
     color: white;
     padding: 10px 20px;
